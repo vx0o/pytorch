@@ -1,0 +1,13 @@
+notepad .gitignore
+# Virtual env
+venv/
+.venv/
+
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+
+# OS/editor
+.DS_Store
+.vscode/
