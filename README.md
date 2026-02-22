@@ -29,6 +29,26 @@ Completed:
 - Indexing and slicing
 - Concatenation
 
+(17/02/2026)
+Started on the blitz 60 tutorial:
+- Worked on the Autograd introduction
+- Differentiation in Autograd
+- Gradients
+- Backprop and Forwardprop
+
+(18/02/2026)
+Neural Networks
+- Defining a Network
+- Loss Function
+- Updating weights
+
+(21/02/2026)
+Training a classifier
+- Loading and Normalising data
+- Definining the model's network
+- Defining a loss function and optim
+- Training the network
+
 
 Torch version
 
@@ -39,11 +59,11 @@ Pytorch - Learn The Basics
 
 ##Progress
 - [x] 01 Intro
-- [ ] 02 Quickstart
-- [ ] 03 Tensors
-- [ ] 04 Datasets & DataLoaders
-- [ ] 05 Transforms
-- [ ] 06 Build the Model
-- [ ] 07 Autograd
-- [ ] 08 Optimization
+- [x] 02 Quickstart
+- [x] 03 Tensors
+- [x] 04 Datasets & DataLoaders
+- [x] 05 Transforms
+- [x] 06 Build the Model
+- [x] 07 Autograd
+- [x] 08 Optimization
 - [ ] 09 Save & Load
