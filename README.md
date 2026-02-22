@@ -1,8 +1,8 @@
-\#PYTORCH TUTORIAL
+# PYTORCH TUTORIAL
 
 
 
-\##Setup
+## Setup
 
 -created virtual environment
 
@@ -12,7 +12,7 @@
 
 ## PROGRESS
 
-\#First Test (13/02/2026)
+# First Test (13/02/2026)
 
 Printed:
 
