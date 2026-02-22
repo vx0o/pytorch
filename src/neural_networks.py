@@ -3,7 +3,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+import torch.optim as optim
 
 class Network(nn.Module):
     def __init__(self):
@@ -58,8 +58,15 @@ class Network(nn.Module):
         return output 
 
 
+
+
+
 net  = Network()
-# print(net)   
+
+optimizer = optim.SGD(net.parameters(), lr=0.01)
+
+criterion = nn.MSELoss()
+print(net)   
 #         #before moving on explain what we are going to do
 #         #1. Define the layers
 #         #2. Define the loss function
@@ -71,17 +78,19 @@ net  = Network()
 
 input = torch.randn(1, 1, 32, 32)
 #size of batch is 1, 1 input channel, 32x32 image
-out = net(input)
-print(out)
-
-net.zero_grad()
-out.backward(torch.randn(1, 10))
-
-output = net(input)
 target = torch.rand(10) #a test traget
-target = target.view(1, -1) # makesit the same shape as the input
-
-criterion = nn.MSELoss()
-
+target = target.view(1, -1) # make it the same shape as output
+output = net(input)
+print(output)  
 loss = criterion(output, target)
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()
+
 print(loss)
+
+
+print(loss.grad_fn) #mseloss
+print(loss.grad_fn.next_functions[0][0]) #linear
+print(loss.grad_fn.next_functions[0][0].next_functions[0][0]) # relu
+

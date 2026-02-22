@@ -4,7 +4,7 @@
 
 - Neural networks can be constructed using `torch.nn`
 - `torch.nn` depends on autograd so it can define models and compute gradients automatically
-- `nn.Module` contains layers and a method `forward(input)` that returns an output
+- `nn.Module` contains layers and a method `forward(input)` that returns an output.
 
 A neural network in Python is a class that contains layers and a forward function.
 
